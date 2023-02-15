@@ -1,17 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Josefin+Slab&family=Estonia&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  h1 {
+    @apply text-3xl text-bright-red border-yellow;
+  }
+  h2 {
+    @apply text-2xl text-yellow;
+  }
+  h3 {
+    @apply text-xl text-yellow;
+  }
+  h4 {
+    @apply text-lg text-yellow;
+  }
+  p {
+    @apply text-base text-yellow;
+  }
+  li {
+    @apply text-base text-yellow;
+  }
+}
+
+h1 {
+  color: rgb(255, 0, 0);
+  line-height: 0.8;
+  text-shadow: -1px -1px 0 theme("colors.yellow"),
+    1px -1px 0 theme("colors.yellow"), -1px 1px 0 theme("colors.yellow"),
+    1px 1px 0 theme("colors.yellow");
+}
+
+header {
+  background-image: url("./assets/princess-cafe.jpg");
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: theme("fontFamily.default");
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #220000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.cake-viewer * {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: black;
+}
+
+/* Chrome, Edge, and Safari */
+.cake-viewer *::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cake-viewer *::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.cake-viewer *::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 14px;
+  border: 3px solid white;
 }
