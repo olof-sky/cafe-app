@@ -1,22 +1,45 @@
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    colors: {
-      blue: "#1fb6ff",
-      purple: "#7e5bef",
-      pink: "#ff49db",
-      orange: "#ff7849",
-      green: "#13ce66",
-      yellow: "#ffc82c",
-      "gray-dark": "#273444",
-      gray: "#8492a6",
-      "gray-light": "#d3dce6",
-    },
-    fontFamily: {
-      sans: ["Graphik", "sans-serif"],
-      serif: ["Merriweather", "serif"],
-    },
     extend: {
+      container: {
+        center: true,
+      },
+      colors: {
+        indigo: "#5c6ac4",
+        blue: "#007ace",
+        "bright-red": "#C70000",
+        red: "#680000",
+        "medium-red": "#440000",
+        "dark-red": "#220000",
+        grey: "#141414",
+        yellow: "#FFEDAD",
+      },
+      fontSize: {
+        sm: "0.8rem",
+        base: "1rem",
+        xl: "1.25rem",
+        "2xl": "1.5rem",
+        "3xl": "8rem",
+      },
+      fontFamily: {
+        header: "Estonia",
+        subHeader: "Josefin slab",
+        default: [
+          "Josefin sans",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Oxygen",
+          "Ubuntu",
+          "Cantarell",
+          "Fira Sans",
+          "Droid Sans",
+          "Helvetica Neue",
+          "sans-serif",
+        ],
+      },
       spacing: {
         "8xl": "96rem",
         "9xl": "128rem",
