@@ -4,8 +4,12 @@ import SmallButton from "../buttons/SmallButton";
 function CampaignCard(props) {
   const [toggled, setToggled] = useState(false);
   return (
-    <article className="container flex flex-col w-fill h-fit md:w-[500px] border-dashed border-b-2 border-yellow gap-4 bg-red">
-      <img className="h-60 w-fill object-cover" alt="/" src={props.img} />
+    <article className="container flex flex-col w-fill sm:w-[640px] h-fit lg:w-[500px] border-dashed border-b-2 border-yellow gap-4 bg-red">
+      <img
+        className="h-60 sm:h-60 w-fill object-cover"
+        alt="/"
+        src={props.img}
+      />
       <h3 className="mx-8">{props.title}</h3>
       <SmallButton
         onToggle={() => setToggled(!toggled)}

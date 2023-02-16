@@ -3,7 +3,7 @@ import SubHeader from "./SubHeader";
 
 function PageSection(props) {
   return (
-    <section className="flex flex-col justify-center items-center mt-6 mb-6 container">
+    <section className="flex flex-col justify-center items-center mt-24 mb-6 container">
       <SubHeader title={props.title} />
       {props.children}
     </section>

@@ -1,27 +1,31 @@
-import CampaignCard from "../components/cards/CampaignCard";
+import { React, useState } from "react";
 import PageSection from "../components/PageSection";
-import shrimpImg from "../assets/shrimp.jpg";
-import coffeeAndBread from "../assets/coffee-and-bread.jpg";
-import CakeViewer from "../components/CakeViewer";
+import ContactSection from "../components/ContactSection";
 import AboutSection from "../components/AboutSection";
-
-const campaignOne = {
-  title: "Kaffe och räksmörgås 99:-",
-  img: shrimpImg,
-  description: "Vår dagsfärska räksmörgås med handskalade räkor, inkl. kaffe.",
-  ingredients: ["Räkor", "Majonäs", "Gurka", "Tomat", "Sallad", "Bröd"],
-};
-const campaignTwo = {
-  title: "Kaffe med valfri bakelse 69:-",
-  img: coffeeAndBread,
-  description: "Valfri bakelse från vårt utbud inkl. kaffe.",
-};
+import CakeViewer from "../components/CakeViewer";
+import CampaignCard from "../components/cards/CampaignCard";
+import StandardButton from "../components/buttons/StandardButton";
+import { campaignOne } from "../data/data";
+import { campaignTwo } from "../data/data";
 
 function Main() {
+  const [showContact, setShowContact] = useState(false);
+
+  function test() {
+    return setShowContact(!showContact);
+  }
   return (
-    <main className="flex flex-col container min-h-min">
+    <main className="container mx-auto">
+      <div className="sm:hidden mt-16 flex flex-col items-center justify-center">
+        <StandardButton event={() => test()} text="Kontakt" />
+        {showContact ? (
+          <div className="mt-16">
+            <ContactSection />
+          </div>
+        ) : null}
+      </div>
       <PageSection title="Kampanjer">
-        <section className="mt-16 mb-16 grid grid-cols-1 md:grid-cols-2 gap-16">
+        <section className="mt-16 mb-16 grid grid-cols-1 lg:grid-cols-2 sm:gap-8 lg:gap-16">
           <CampaignCard
             img={campaignOne.img}
             title={campaignOne.title}
