@@ -5,6 +5,7 @@ import DocumentMeta from "react-document-meta";
 import Main from "./pages/Main";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import NoMatch from "./pages/NoMatch";
 import "./index.css";
 
@@ -24,6 +25,7 @@ const AppLayout = () => (
     <Header />
     <NavBar />
     <Outlet />
+    <Footer />
   </DocumentMeta>
 );
 
