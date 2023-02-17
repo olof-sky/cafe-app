@@ -4,9 +4,12 @@ import SmallButton from "../buttons/SmallButton";
 function CampaignCard(props) {
   const [toggled, setToggled] = useState(false);
   return (
-    <article className="container flex flex-col w-fill sm:w-[640px] h-fit lg:w-[500px] border-dashed border-b-2 border-yellow gap-4 bg-red">
+    <article
+      className={`container transition linear flex flex-col w-fill sm:w-[640px] h-fit lg:w-[500px] border-dashed border-b-2 border-yellow gap-4 bg-red`}
+    >
       <img
-        className="h-60 sm:h-60 w-fill object-cover"
+        onClick={() => setToggled(!toggled)}
+        className="h-60 sm:h-60 w-fill object-cover hover:cursor-pointer"
         alt="/"
         src={props.img}
       />
@@ -17,8 +20,14 @@ function CampaignCard(props) {
         toggledText="Mindre info"
         untoggledText="Mer info"
       />
-      {toggled ? (
-        <div className="flex flex-col bg-grey pl-6 pr-6 pt-6 gap-6 pb-6">
+      <div
+        className={`${
+          toggled
+            ? "transform origin-top scale-y-0 h-0 bg-grey"
+            : "transform origin-top scale-y-1 h-fit"
+        } transition linear`}
+      >
+        <div className={"flex flex-col bg-grey pl-6 pr-6 pt-6 gap-6 pb-6"}>
           <p>{props.description}</p>
           {props.ingredients ? (
             <div>
@@ -31,7 +40,7 @@ function CampaignCard(props) {
             </div>
           ) : null}
         </div>
-      ) : null}
+      </div>
     </article>
   );
 }

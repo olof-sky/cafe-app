@@ -1,5 +1,5 @@
-import NavButton from "../components/buttons/NavButton";
-import CakeSmallCard from "../components/cards/CakeSmallCard";
+import NavButton from "./buttons/NavButton";
+import CakeSmallCard from "./cards/CakeSmallCard";
 import { cakeList } from "../data/data";
 import { React, useEffect, useState } from "react";
 
