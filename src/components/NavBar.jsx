@@ -23,7 +23,7 @@ function NavBar() {
         <NavButton url="/tartar" text="Tårtor" />
         <NavButton url="/brollop" text="Bröllop" />
       </nav>
-      <nav className="fixed z-10 top-0 right-0 sm:hidden pt-6 pr-16">
+      <nav className="fixed z-10 top-0 right-0 lg:hidden pt-6 pr-16">
         <button className="fixed z-30" onClick={() => setShowNav(!showNav)}>
           <RxHamburgerMenu className="w-10 h-10 text-yellow" />
         </button>

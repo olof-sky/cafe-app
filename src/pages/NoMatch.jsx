@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
+import NavButton from "../components/buttons/NavButton";
 function NoMatch() {
   return (
-    <main>
-      <h2>Nothing to see here!</h2>
-      <p>
-        <Link to={process.env.REACT_APP_BASE_URL}>Go to the home page</Link>
-      </p>
-    </main>
+    <div className="container mt-16 flex flex-col text-center align-center">
+      <h2>Oops! Sidan du letade efter finns inte..</h2>
+    </div>
   );
 }
 

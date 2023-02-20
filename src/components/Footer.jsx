@@ -1,9 +1,9 @@
-import { React, Fragment } from "react";
+import { React } from "react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import ContactSection from "./ContactSection";
 
 const containerStyle = {
-  width: "100vw",
+  width: "100%",
   height: "20rem",
 };
 
@@ -24,7 +24,7 @@ function Footer() {
   });
 
   return (
-    <Fragment>
+    <footer>
       {isLoaded ? (
         <div className="mt-40">
           <GoogleMap
@@ -35,15 +35,15 @@ function Footer() {
           ></GoogleMap>
         </div>
       ) : null}
-      <footer className="flex flex-col justify-center sm:flex-row sm:gap-16 gap-6 sm:pb-16 sm:pt-12 bg-grey p-6 h-fit">
+      <div className="flex flex-col justify-center sm:flex-row sm:gap-16 gap-6 sm:pb-16 sm:pt-12 bg-grey p-6 h-fit">
         <div>
           <h4>Princess konditori</h4>
           <h4>Örebro, Storgatan 47</h4>
           <h4>703 63 Örebro, Sweden</h4>
         </div>
         <ContactSection />
-      </footer>
-    </Fragment>
+      </div>
+    </footer>
   );
 }
 export default Footer;

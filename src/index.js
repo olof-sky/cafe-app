@@ -1,7 +1,8 @@
 import { React } from "react";
 import { createRoot } from "react-dom/client";
-import { RouterProvider, Outlet, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import DocumentMeta from "react-document-meta";
+import MainContainer from "./components/MainContainer";
 import Main from "./pages/Main";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
@@ -15,7 +16,8 @@ const meta = {
   meta: {
     charset: "utf-8",
     name: {
-      keywords: "fika, café",
+      keywords:
+        "fika, cafe, café, fika örebro, cafe örebro, tårta, beställa tårta örebro",
     },
   },
 };
@@ -24,7 +26,7 @@ const AppLayout = () => (
   <DocumentMeta {...meta}>
     <Header />
     <NavBar />
-    <Outlet />
+    <MainContainer />
     <Footer />
   </DocumentMeta>
 );

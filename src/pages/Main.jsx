@@ -15,7 +15,7 @@ function Main() {
     return setShowContact(!showContact);
   }
   return (
-    <main className="container mx-auto">
+    <div className="container mx-auto">
       <div className="sm:hidden mt-16 flex flex-col items-center justify-center">
         <StandardButton event={() => test()} text="Kontakt" />
         {showContact ? (
@@ -25,7 +25,7 @@ function Main() {
         ) : null}
       </div>
       <PageSection title="Kampanjer">
-        <section className="mt-16 mb-16 grid grid-cols-1 lg:grid-cols-2 sm:gap-8 lg:gap-16">
+        <section className="mt-16 mb-16 grid grid-cols-1 xl:grid-cols-2 sm:gap-8 xl:gap-16">
           <CampaignCard
             img={campaignOne.img}
             title={campaignOne.title}
@@ -46,7 +46,7 @@ function Main() {
         </section>
       </PageSection>
       <AboutSection />
-    </main>
+    </div>
   );
 }
 

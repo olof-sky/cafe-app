@@ -5,7 +5,7 @@ function CampaignCard(props) {
   const [toggled, setToggled] = useState(false);
   return (
     <article
-      className={`container transition linear flex flex-col w-fill sm:w-[640px] h-fit lg:w-[500px] border-dashed border-b-2 border-yellow gap-4 bg-red`}
+      className={`container transition linear flex flex-col w-fill sm:w-[640px] h-fit xl:w-[500px] border-dashed border-b-2 border-yellow gap-4 bg-red`}
     >
       <img
         onClick={() => setToggled(!toggled)}

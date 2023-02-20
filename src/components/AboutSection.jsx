@@ -2,8 +2,8 @@ import SubHeader from "./SubHeader";
 
 function AboutSection() {
   return (
-    <section className="flex flex-col gap-12 lg:flex-row lg:w-[900px] justify-between items-center mt-24 mb-24 mb-6 container">
-      <article className="flex flex-col justify-center items-center w-full lg:w-full sm:w-96 gap-2 bg-red p-6 pb-16 sm:border border-t-2 border-b-2 lg:border border-yellow">
+    <section className="flex flex-col gap-12 xl:flex-row xl:w-[900px] justify-between items-center mt-24 mb-24 mb-6 container">
+      <article className="flex flex-col justify-center items-center w-full xl:w-full sm:w-96 gap-2 bg-red p-6 pb-16 sm:border border-t-2 border-b-2 xl:border border-yellow">
         <SubHeader title="Om oss" />
         <p className="mt-4">
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
