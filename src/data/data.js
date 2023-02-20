@@ -1,13 +1,25 @@
-import cake from "../assets/princess-cake.png";
+import princessPink from "../assets/princess-cake.png";
+import budapest from "../assets/budapest.png";
+import chocklad from "../assets/chocklad.png";
+import chocklad2 from "../assets/chocklad-2.png";
+import princessGreen from "../assets/marsipan.png";
 import shrimpImg from "../assets/shrimp.jpg";
 import coffeeAndBread from "../assets/coffee-and-bread.jpg";
 
 export const cakeList = [
-  { img: cake, name: "Princesstårta, rosa", link: "/princess-cake" },
-  { img: cake, name: "princess-cake2", link: "/princess-cake" },
-  { img: cake, name: "princess-cake3", link: "/princess-cake" },
-  { img: cake, name: "princess-cake4", link: "/princess-cake" },
-  { img: cake, name: "princess-cake5", link: "/princess-cake" },
+  {
+    img: princessPink,
+    name: "Princesstårta, rosa",
+    link: "/princess-cake-pink",
+  },
+  {
+    img: princessGreen,
+    name: "Princesstårta, grön",
+    link: "/princess-cake-green",
+  },
+  { img: budapest, name: "Budapest", link: "/budapest" },
+  { img: chocklad, name: "Chockladtårta", link: "/chocolate-cake" },
+  { img: chocklad2, name: "Chockladtårta, stor", link: "/chocolate-cake-2" },
 ];
 
 export const campaignOne = {
