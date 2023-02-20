@@ -23,8 +23,8 @@ function CampaignCard(props) {
       <div
         className={`${
           toggled
-            ? "transform origin-top scale-y-0 h-0 bg-grey"
-            : "transform origin-top scale-y-1 h-fit"
+            ? "transform origin-top scale-y-1 h-fit"
+            : "transform origin-top scale-y-0 h-0 bg-grey"
         } transition linear`}
       >
         <div className={"flex flex-col bg-grey pl-6 pr-6 pt-6 gap-6 pb-6"}>
@@ -33,8 +33,12 @@ function CampaignCard(props) {
             <div>
               <p>Ingredienser:</p>
               <ul>
-                {props.ingredients.map((i) => {
-                  return <li className="list-disc ml-4">{i}</li>;
+                {props.ingredients.map((ingredient, index) => {
+                  return (
+                    <li key={index} className="list-disc ml-4">
+                      {ingredient}
+                    </li>
+                  );
                 })}
               </ul>
             </div>
