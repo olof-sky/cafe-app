@@ -5,10 +5,9 @@ import { asideData } from "../data/data";
 
 function Aside() {
   const [asideContent, setAsideContent] = useState([]);
-  const data = asideData;
 
   useEffect(() => {
-    setAsideContent(data);
+    setAsideContent(asideData);
   }, []);
 
   return (

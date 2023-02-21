@@ -6,11 +6,10 @@ import { React, useEffect, useState } from "react";
 function CakeViewer() {
   const [cakes, setCakes] = useState([]);
   const [selectedCake, setSelectedCake] = useState({});
-  const list = cakeList;
 
   useEffect(() => {
-    setCakes(list);
-    setSelectedCake(list[0]);
+    setCakes(cakeList);
+    setSelectedCake(cakeList[0]);
   }, []);
 
   return (
