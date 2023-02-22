@@ -16,7 +16,7 @@
 
 ## Concept
 
-Café landing page with carousel of cakes etc. Including contact form/information.
+Café webpage showcasing cakes, sales, offers and contact information etc.
 
 ## Available Scripts
 
