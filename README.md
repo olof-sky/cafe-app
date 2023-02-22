@@ -1,18 +1,18 @@
-# Getting Started with Create React App
+# Café application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Todo
 
-## Todo design
-
-- [x] Figure out concept of page
-- [x] Do research on available design choices in tailwind
-- [x] Create figma layout, mobile first design
-- [x] Design should contain animation on scroll
-- [x] Nav element
-- [x] Aside element
-- [x] Footer element
-- [x] Slider element
-- [x] Contact form
+- [ ] Create and structure db in firebase from current data.
+- [ ] Connect db to components to handle images, text and links.
+- [ ] Create admin page for handling of database
+- [ ] Refactor code for handling variables in admin page
+- [ ] Refactor code for better reusability of components
+- [ ] Refactor variable naming for reusability
+- [ ] Add more pages
+  - Kontakt
+  - Bilder
+  - Tårtor
+  - Bröllop
 
 ## Concept
 
