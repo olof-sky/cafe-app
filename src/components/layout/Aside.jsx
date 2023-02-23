@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
-import PageSection from "../components/PageSection";
-import AsideCard from "./cards/AsideCard";
-import { asideData } from "../data/data";
+import PageSection from "../PageSection";
+import AsideCard from "../cards/AsideCard";
+import { asideData } from "../../data/data";
 
 function Aside() {
   const [asideContent, setAsideContent] = useState([]);

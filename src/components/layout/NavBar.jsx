@@ -1,6 +1,6 @@
 import { React, useState, Fragment } from "react";
 import { Link } from "react-router-dom";
-import NavButton from "./buttons/NavButton";
+import NavButton from "../buttons/NavButton";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 

@@ -1,6 +1,6 @@
 import { React } from "react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
-import ContactSection from "./ContactSection";
+import ContactSection from "../ContactSection";
 
 const containerStyle = {
   width: "100%",

@@ -2,11 +2,11 @@ import { React } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import DocumentMeta from "react-document-meta";
-import MainContainer from "./components/MainContainer";
+import MainContainer from "./components/layout/MainContainer";
 import Main from "./pages/Main";
-import Header from "./components/Header";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
+import Header from "./components/layout/Header";
+import NavBar from "./components/layout/NavBar";
+import Footer from "./components/layout/Footer";
 import NoMatch from "./pages/NoMatch";
 import "./index.css";
 

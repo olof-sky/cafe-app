@@ -2,17 +2,19 @@
 
 ## Todo
 
-- [ ] Create and structure db in firebase from current data.
+- [/] Create and structure db in firebase from current data.
+- [ ] Create and structure storage in firebase to handle images.
 - [ ] Connect db to components to handle images, text and links.
+  -
 - [ ] Create admin page for handling of database
 - [ ] Refactor code for handling variables in admin page
 - [ ] Refactor code for better reusability of components
 - [ ] Refactor variable naming for reusability
 - [ ] Add more pages
-  - Kontakt
-  - Bilder
-  - Tårtor
-  - Bröllop
+  - [ ] Kontakt
+  - [ ] Bilder
+  - [ ] Tårtor
+  - [ ] Bröllop
 
 ## Concept
 

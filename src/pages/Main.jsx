@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import PageSection from "../components/PageSection";
 import ContactSection from "../components/ContactSection";
 import AboutSection from "../components/AboutSection";
@@ -11,13 +11,13 @@ import { campaignTwo } from "../data/data";
 function Main() {
   const [showContact, setShowContact] = useState(false);
 
-  function test() {
-    return setShowContact(!showContact);
-  }
   return (
     <div className="container mx-auto">
       <div className="sm:hidden mt-16 flex flex-col items-center justify-center">
-        <StandardButton event={() => test()} text="Kontakt" />
+        <StandardButton
+          event={() => setShowContact(!showContact)}
+          text="Kontakt"
+        />
         {showContact ? (
           <div className="mt-16">
             <ContactSection />
