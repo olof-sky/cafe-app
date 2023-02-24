@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { React, useState } from "react";
 import PageSection from "../components/PageSection";
 import ContactSection from "../components/ContactSection";
 import AboutSection from "../components/AboutSection";
@@ -7,10 +7,12 @@ import CampaignCard from "../components/cards/CampaignCard";
 import StandardButton from "../components/buttons/StandardButton";
 import { campaignOne } from "../data/data";
 import { campaignTwo } from "../data/data";
+import { useOutletContext } from "react-router";
 
 function Main() {
   const [showContact, setShowContact] = useState(false);
-
+  const data = useOutletContext();
+  console.log(data);
   return (
     <div className="container mx-auto">
       <div className="sm:hidden mt-16 flex flex-col items-center justify-center">

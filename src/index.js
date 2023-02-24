@@ -21,7 +21,6 @@ const meta = {
     },
   },
 };
-
 const AppLayout = () => (
   <DocumentMeta {...meta}>
     <Header />
