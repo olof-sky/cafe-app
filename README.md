@@ -4,7 +4,7 @@
 
 - [x] Create and structure db in firebase from current data.
 - [x] Create and structure storage in firebase to handle images.
-- [ ] Connect db to components to handle images, text and links.
+- [x] Connect db to components to handle images, text and links.
 - [ ] Create CRUD-functionality for db and storage
 - [ ] Create admin page for handling of database
 - [ ] Refactor code for handling variables in admin page
