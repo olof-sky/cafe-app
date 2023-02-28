@@ -3,7 +3,7 @@ import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "../config/firebase";
 
 const useFirestore = (collectionName) => {
-  const [docs, setDocs] = useState([]);
+  const [docs, setDocs] = useState({});
 
   useEffect(() => {
     const collectionRef = collection(db, collectionName);
@@ -17,7 +17,7 @@ const useFirestore = (collectionName) => {
     return () => {
       unsub();
     };
-  }, {});
+  }, []);
 
   return { docs };
 };

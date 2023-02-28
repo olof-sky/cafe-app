@@ -8,6 +8,9 @@ import Header from "./components/layout/Header";
 import NavBar from "./components/layout/NavBar";
 import Footer from "./components/layout/Footer";
 import NoMatch from "./pages/NoMatch";
+import Loader from "./components/Loader";
+import useFirestore from "./hooks/useFirestore";
+import { Context } from "./data/context";
 import "./index.css";
 
 const meta = {
@@ -21,14 +24,23 @@ const meta = {
     },
   },
 };
-const AppLayout = () => (
-  <DocumentMeta {...meta}>
-    <Header />
-    <NavBar />
-    <MainContainer />
-    <Footer />
-  </DocumentMeta>
-);
+
+const AppLayout = () => {
+  const data = useFirestore("data");
+
+  return data.docs ? (
+    <Context.Provider value={data.docs}>
+      <DocumentMeta {...meta}>
+        <Header />
+        <NavBar />
+        <MainContainer />
+        <Footer />
+      </DocumentMeta>
+    </Context.Provider>
+  ) : (
+    <Loader />
+  );
+};
 
 const router = createBrowserRouter([
   {

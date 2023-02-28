@@ -1,16 +1,14 @@
 import NavButton from "./buttons/NavButton";
+import Loader from "./Loader";
 import CakeSmallCard from "./cards/CakeSmallCard";
-import { cakeList } from "../data/data";
-import { React, useEffect, useState } from "react";
+import { Context } from "../data/context";
+import { React, useState, useContext } from "react";
 
 function CakeViewer() {
-  const [cakes, setCakes] = useState([]);
-  const [selectedCake, setSelectedCake] = useState({});
-
-  useEffect(() => {
-    setCakes(cakeList);
-    setSelectedCake(cakeList[0]);
-  }, []);
+  const data = useContext(Context);
+  const [selectedCake, setSelectedCake] = useState(
+    Object.entries(data.cakes)[0]
+  );
 
   return (
     <article className="cake-viewer flex flex-col justify-end xl:justify-start xl:flex-row relative h-[600px] xl:h-fit sm:w-[640px] xl:w-[900px]">
@@ -19,24 +17,30 @@ function CakeViewer() {
           <img
             className=" w-60 xl:w-96 mb-6"
             alt="cake-selected"
-            src={selectedCake.img}
+            src={selectedCake[1].img}
           />
         </div>
         <div className="flex flex-col items-center gap-4 py-6 pb-8 bg-dark-red sm:bg-red xl:bg-red w-full ">
-          <h2>{selectedCake.name}</h2>
-          <NavButton url={"/tartar" + selectedCake.link} text="Beställ" />
+          <h2>{selectedCake[0]}</h2>
+          <NavButton url={"/tartar" + selectedCake[1].navLink} text="Beställ" />
         </div>
       </div>
       <div className="flex flex-row xl:flex-col w-screen sm:w-full xl:w-fit xl:h-full top-0 gap-6 pb-6 xl:pb-0 overflow-y-hidden xl:overflow-y-scroll xl:overflow-x-hidden absolute xl:right-0 xl:pr-4">
-        {cakes.map((cake, i) => {
-          return (
-            <CakeSmallCard
-              key={i}
-              selectCake={() => setSelectedCake(cake)}
-              image={cake.img}
-            />
-          );
-        })}
+        {data.cakes ? (
+          Object.keys(data.cakes).map((cake, i) => {
+            return (
+              <CakeSmallCard
+                key={i}
+                selectCake={() =>
+                  setSelectedCake(Object.entries(data.cakes)[i])
+                }
+                image={data.cakes[cake].img}
+              />
+            );
+          })
+        ) : (
+          <Loader />
+        )}
       </div>
     </article>
   );
