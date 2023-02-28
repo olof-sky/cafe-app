@@ -7,6 +7,7 @@
 - [x] Connect db to components to handle images, text and links.
 - [ ] Create CRUD-functionality for db and storage
 - [ ] Create admin page for handling of database
+- [ ] Set loader containers to fit animation.
 - [ ] Refactor code for handling variables in admin page
 - [ ] Refactor code for better reusability of components
 - [ ] Refactor variable naming for reusability
