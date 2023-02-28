@@ -12,6 +12,7 @@ import Loader from "./components/Loader";
 import useFirestore from "./hooks/useFirestore";
 import { Context } from "./data/context";
 import "./index.css";
+import Admin from "./pages/Admin";
 
 const meta = {
   title: "Princess konditori",
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Main />,
+      },
+      {
+        path: "/admin",
+        element: <Admin />,
       },
       {
         path: "*",
