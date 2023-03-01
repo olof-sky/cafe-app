@@ -18,9 +18,10 @@
 
   #### Required inputs
 
-  | Aside card            | Campaign card             |
-  | --------------------- | ------------------------- |
-  | `All inputs required` | `Ingredient not required` |
+  | Card          | Input                     |
+  | ------------- | ------------------------- |
+  | Aside card    | `All inputs required`     |
+  | Campaign card | `Ingredient not required` |
 
 - [ ] Set loader containers to fit animation.
 - [ ] Refactor code for handling variables in admin page
