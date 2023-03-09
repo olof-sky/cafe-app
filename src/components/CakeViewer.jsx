@@ -1,14 +1,12 @@
+import { React, useState, useContext } from "react";
 import NavButton from "./buttons/NavButton";
 import Loader from "./Loader";
 import CakeSmallCard from "./cards/CakeSmallCard";
 import { Context } from "../data/context";
-import { React, useState, useContext } from "react";
 
 function CakeViewer() {
-  const data = useContext(Context);
-  const [selectedCake, setSelectedCake] = useState(
-    Object.entries(data.cakes)[0]
-  );
+  const { cakes } = useContext(Context);
+  const [selectedCake, setSelectedCake] = useState(Object.entries(cakes)[0]);
 
   return (
     <article className="cake-viewer flex flex-col justify-end xl:justify-start xl:flex-row relative h-[600px] xl:h-fit sm:w-[640px] xl:w-[900px]">
@@ -26,15 +24,13 @@ function CakeViewer() {
         </div>
       </div>
       <div className="flex flex-row xl:flex-col w-screen sm:w-full xl:w-fit xl:h-full top-0 gap-6 pb-6 xl:pb-0 overflow-y-hidden xl:overflow-y-scroll xl:overflow-x-hidden absolute xl:right-0 xl:pr-4">
-        {data.cakes ? (
-          Object.keys(data.cakes).map((cake, i) => {
+        {cakes ? (
+          Object.keys(cakes).map((cake, i) => {
             return (
               <CakeSmallCard
                 key={i}
-                selectCake={() =>
-                  setSelectedCake(Object.entries(data.cakes)[i])
-                }
-                image={data.cakes[cake].img}
+                selectCake={() => setSelectedCake(Object.entries(cakes)[i])}
+                image={cakes[cake].img}
               />
             );
           })
