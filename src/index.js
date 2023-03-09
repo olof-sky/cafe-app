@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import DocumentMeta from "react-document-meta";
@@ -8,9 +8,8 @@ import Header from "./components/layout/Header";
 import NavBar from "./components/layout/NavBar";
 import Footer from "./components/layout/Footer";
 import NoMatch from "./pages/NoMatch";
+import Provider from "./data/context";
 import Loader from "./components/Loader";
-import useFirestore from "./hooks/useFirestore";
-import { Context } from "./data/context";
 import "./index.css";
 import Admin from "./pages/Admin";
 
@@ -27,19 +26,15 @@ const meta = {
 };
 
 const AppLayout = () => {
-  const data = useFirestore("data");
-
-  return data.docs ? (
-    <Context.Provider value={data.docs}>
+  return (
+    <Provider>
       <DocumentMeta {...meta}>
         <Header />
         <NavBar />
         <MainContainer />
         <Footer />
       </DocumentMeta>
-    </Context.Provider>
-  ) : (
-    <Loader />
+    </Provider>
   );
 };
 
@@ -64,5 +59,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <Suspense fallback={<Loader />}>
+    <RouterProvider router={router} />
+  </Suspense>
 );
