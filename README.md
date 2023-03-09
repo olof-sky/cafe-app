@@ -12,9 +12,13 @@
 
   Use cards to display inputs/existing cards for Aside and Campaign content. UseContext to get cards to state while working and use Publish all-button to send POST request to db.
 
+  #### Data structure
+
+  Data provided by Provider in index.js, provider context distributes useFirestore hook. useFirestore contains data state and API functionality.
+
   #### Card behavior
 
-  Update state on inputs, trigger on keydown.
+  New card button click initiate the card in state with id. Update state on inputs, trigger on keydown. On img upload showcase the image in new card. Each card is an object similar to that of the db structure. Ingredients in campaign card have their own id for delete function.
 
   #### Required inputs
 
